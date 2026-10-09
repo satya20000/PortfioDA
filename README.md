@@ -1,6 +1,10 @@
 # Satya Ranjan Nayak — Data, made clear.
 
-A React portfolio with a rotating 3D data globe, scroll reveals, subtle perspective on project cards, and four independent interactive analytics dashboards. Built for Vercel with React 19, Vite, Motion, and Recharts.
+A cinematic React portfolio with interactive 3D particle artwork, animated typography, scroll-linked depth, magnetic buttons, a source-backed project showcase, and four independent analytics dashboards. Built for Vercel with React 19, Vite, Motion, and Recharts.
+
+![Portfolio desktop preview](docs/screenshots/homepage.png)
+
+[Phone preview](docs/screenshots/homepage-mobile.png)
 
 ## Deploy on Vercel
 
@@ -31,7 +35,16 @@ Open the local URL printed by Vite. `npm run build` creates the production bundl
 
 Every dashboard includes live recalculation of KPIs and charts, segment comparisons, searchable/sortable/paginated anonymous records, CSV export of the dashboard-filtered record population, source details, metric definitions, reset, and shareable view URLs. The SaaS dashboard also includes account-weighted cohort retention with unobserved future ages left blank. Record-table searches apply only to the table and do not change the dashboard selection used by export.
 
-The homepage’s small chart previews use the actual source trends. Dashboard code and datasets are loaded on demand; the homepage does not download the full order or loan data.
+The homepage’s chart previews use the actual source trends and calendar spacing. Move over a chart or focus it and use Left/Right, Home, and End to explore the observations. Dashboard code and datasets are loaded on demand; the homepage does not download the full order or loan data.
+
+## Motion and interaction
+
+- The hero artwork morphs between Globe, Orbit, and Signal. Pointer movement changes its perspective on devices with a mouse.
+- Headline masks, scroll-linked project depth, chart drawing, and a word-by-word statement reveal give the page a continuous visual rhythm. Buttons respond subtly to the pointer.
+- The header's motion control pauses the artwork and ambient animation. The preference survives reloads; device-level reduced motion is respected automatically.
+- Canvas rendering stops outside the viewport and when the tab is hidden. Touch devices use a lower rendering resolution and avoid pointer effects.
+- Typography is self-hosted through Fontsource; the site does not depend on a Google Fonts request.
+- The mobile navigation supports Escape and keeps focus out of the covered page until the menu closes.
 
 ## Honest analytical boundaries
 
@@ -70,4 +83,4 @@ The website and downloadable resume cover the four source repositories, with pro
 
 ## Verification
 
-`npm test` checks the published source control totals, resolved denominators, multi-category order grain, latest SaaS balances, month-level reconciliation, cohort censoring, intersecting filters, and reset-to-All behavior. `npm run test:ui` runs DOM integration checks for routes, filters, tabs, search, sorting, pagination, source details, and invalid parameters. See `docs/verification.md` for the exact checks and browser-review limits.
+`npm test` checks the published source control totals, resolved denominators, multi-category order grain, latest SaaS balances, month-level reconciliation, cohort censoring, intersecting filters, and reset-to-All behavior. `npm run test:ui` runs DOM integration checks for routes, filters, tabs, search, sorting, pagination, source details, and invalid parameters. See `docs/verification.md` for the automated and browser checks.

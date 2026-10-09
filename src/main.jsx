@@ -3,6 +3,10 @@ import { createRoot } from 'react-dom/client';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import { MotionConfig } from 'motion/react';
 import Portfolio from './pages/Portfolio.jsx';
+import '@fontsource-variable/dm-sans';
+import '@fontsource-variable/space-grotesk';
+import '@fontsource/dm-serif-display/latin-400.css';
+import '@fontsource/dm-serif-display/latin-400-italic.css';
 import './styles.css';
 const Dashboard = lazy(() => import('./pages/Dashboard.jsx'));
 

@@ -2,7 +2,7 @@ import { Area, AreaChart, Bar, BarChart, CartesianGrid, Cell, Legend, Line, Line
 import { human, money, number, pct } from '../lib/analytics.mjs';
 const palette = ['#b9f56b', '#93baff', '#bd9bff', '#e8c693', '#75d3b5', '#f39a9a', '#acb7b0'];
 const grid = '#26302b';
-const tick = { fill: '#9aa79f', fontSize: 11, fontFamily: 'DM Sans, sans-serif' };
+const tick = { fill: '#9aa79f', fontSize: 11, fontFamily: 'DM Sans Variable, sans-serif' };
 const shortDate = value => /^\d{4}-\d{2}$/.test(value) ? new Date(`${value}-02T00:00:00Z`).toLocaleDateString('en-US', { month: 'short', year: '2-digit', timeZone: 'UTC' }) : human(value);
 const formatValue = (value, format, unit) => format === 'percent' ? pct(value) : format === 'money' ? money(value, unit, true) : number(value, format === 'days' || format === 'score' ? 1 : 0);
 

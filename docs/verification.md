@@ -2,7 +2,7 @@
 
 ## Scope
 
-The user story is: portfolio project card → project dashboard route → same-origin anonymous source snapshot → intersecting filters → recalculated metrics, charts, and record views.
+The user story is: immersive, responsive portfolio → project dashboard route → same-origin anonymous source snapshot → intersecting filters → recalculated metrics, charts, and record views.
 
 ## Completed checks
 
@@ -13,8 +13,20 @@ The user story is: portfolio project card → project dashboard route → same-o
 - Responsive CSS covers desktop, tablet and phone widths; wide tables scroll within their containers. Navigation, controls, source dialogs, reduced motion, focus states and accessible labels are included.
 - The downloadable resume contains the four showcased projects with source-reconciled figures. Its one-page PDF was rendered and visually checked for readable text, spacing, and complete content.
 
-## Browser review limitation
+## Browser verification
 
-This environment could not download a usable Playwright Chromium archive. The available remote browser could not reach the local preview (`ERR_CONNECTION_REFUSED`); loopback requests from a separate command were refused too. As a result, actual browser rendering, chart hover behavior, viewport screenshots, and animation performance were **not visually verified** here. Source calculations and DOM interactions were verified as stated above.
+The redesigned portfolio was checked locally with Playwright and Chromium 153. The browser and local Vite server ran in the same process environment. These checks used the actual canvas, SVG previews, dashboard code, datasets, and Recharts components.
 
-After deploying on Vercel, inspect the homepage and every dashboard at normal and phone widths. Confirm chart marks, axis labels and tooltips, filter-reset behavior, direct-route refreshes, CSV downloads, and the resume download against the deployed build. The repository is prepared for deployment; no Vercel deployment was created in this task because the user chose to upload it themselves.
+- The desktop and touch-emulated phone layouts were rendered and visually reviewed, including the hero, project showcase, navigation, about, approach, and contact sections.
+- There was no horizontal document overflow at 1440, 1024, 768, 390, 360, or 320 pixels. All 12 project headline figures were visible inside their masks at desktop and small-phone widths.
+- The particle canvas animated, stopped after pausing, changed shape while paused, and preserved the pause preference after reload. Device-level reduced motion disabled the canvas drawing loop and the tool marquee.
+- Keyboard navigation through a project preview reached its first and last source observations. Calendar spacing preserves gaps in the monthly source series.
+- The mobile menu isolated covered content from focus, closed with Escape, restored the menu control's focus, and unlocked page content after following a section link.
+- Each of the four Explore dashboard links loaded its dashboard and real chart marks. A filter changed the KPI population on every dashboard, and Reset restored it. Source dialogs opened and closed with Escape; the CSV export produced a downloadable file.
+- No uncaught browser runtime errors occurred during these flows.
+
+Captured homepage views: [desktop](screenshots/homepage.png) and [phone](screenshots/homepage-mobile.png).
+
+## Deployment boundary
+
+These checks use browser device emulation; they do not establish physical-device GPU performance or a live hosting audit. After deploying on Vercel, check direct-route refreshes, resume downloads, chart tooltips, and asset loading against the deployed build. No Vercel deployment was created because the user chose to deploy it themselves.
