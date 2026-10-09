@@ -66,7 +66,7 @@ The checked-in manifest pins the snapshot used for this portfolio. To reproduce 
 - Resume download: replace `public/resume.pdf`.
 - Portfolio styling: `src/styles.css`. Dashboard styling: `src/dashboard.css`.
 
-The website follows the supplied resume and omits the MBA degree. Contact goes to the supplied GitHub profile; no email address or contact form has been invented. Two earlier resume projects are mentioned in the toolkit section; complete interactive dashboards are provided for the four source repositories.
+The website and downloadable resume cover the four source repositories, with project figures reconciled to their data. Education includes the supplied B.Tech degree. Contact goes to the supplied GitHub profile; no email address or contact form has been invented.
 
 ## Verification
 

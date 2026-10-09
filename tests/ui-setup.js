@@ -1,0 +1,10 @@
+import { vi } from 'vitest';
+import fs from 'node:fs';
+import path from 'node:path';
+window.scrollTo = () => {};
+window.matchMedia = () => ({ matches: true, addEventListener() {}, removeEventListener() {} });
+HTMLDialogElement.prototype.showModal = function () { this.setAttribute('open', ''); };
+HTMLDialogElement.prototype.close = function () { this.removeAttribute('open'); };
+globalThis.ResizeObserver = class { observe() {} unobserve() {} disconnect() {} };
+globalThis.IntersectionObserver = class { observe() {} unobserve() {} disconnect() {} };
+globalThis.fetch = vi.fn(async url => ({ ok: true, json: async () => JSON.parse(fs.readFileSync(path.resolve('public', String(url).slice(1)), 'utf8')) }));

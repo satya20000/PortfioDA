@@ -1,0 +1,98 @@
+[
+  {
+    "id": "revenue-funnel",
+    "rows": 8000,
+    "bytes": 643991,
+    "source": {
+      "label": "Olist marketing funnel + marketplace",
+      "classification": "Historical public data",
+      "repository": "https://github.com/satya20000/ecomrevenuefunnel",
+      "commit": "e230423d189b9c08202a4bd0ee1c76f182a2cb7b",
+      "files": [
+        {
+          "path": "02_Cleaned_Data/fact_lead.csv",
+          "sha256": "4de1c6e78487c9d7243f113367a53f8c1590e70bc3f80a90253c23f15b3d57a3",
+          "url": "https://github.com/satya20000/ecomrevenuefunnel/blob/e230423d189b9c08202a4bd0ee1c76f182a2cb7b/02_Cleaned_Data/fact_lead.csv"
+        }
+      ]
+    },
+    "grain": "One marketing qualified lead"
+  },
+  {
+    "id": "customer-experience",
+    "rows": 99441,
+    "bytes": 9622647,
+    "source": {
+      "label": "Olist Brazilian e-commerce",
+      "classification": "Historical public data",
+      "repository": "https://github.com/satya20000/customexp",
+      "commit": "88903b1a65baac3b770e1044e128c373eec3d821",
+      "files": [
+        {
+          "path": "02_Cleaned_Data/fact_order.csv.gz.part001",
+          "sha256": "fadd07cd073e5a0856e46296d6c57ba0cf37ace3bd8605ee587cae167e91a71c",
+          "url": "https://github.com/satya20000/customexp/blob/88903b1a65baac3b770e1044e128c373eec3d821/02_Cleaned_Data/fact_order.csv.gz.part001"
+        },
+        {
+          "path": "02_Cleaned_Data/fact_order.csv.gz.part002",
+          "sha256": "c6519095b1e6732e75de2af0c6e9fdb59747741cfbf12fb2afbd78397d903116",
+          "url": "https://github.com/satya20000/customexp/blob/88903b1a65baac3b770e1044e128c373eec3d821/02_Cleaned_Data/fact_order.csv.gz.part002"
+        },
+        {
+          "path": "02_Cleaned_Data/bridge_order_seller_category.csv",
+          "sha256": "2ff7d4484e5dccc5107b3ac6c0152514e06efe767179fe78d7ca0819e8576528",
+          "url": "https://github.com/satya20000/customexp/blob/88903b1a65baac3b770e1044e128c373eec3d821/02_Cleaned_Data/bridge_order_seller_category.csv"
+        }
+      ]
+    },
+    "grain": "One order, with distinct category membership"
+  },
+  {
+    "id": "credit-portfolio",
+    "rows": 39717,
+    "bytes": 4008524,
+    "source": {
+      "label": "LendingClub accepted loans, 2007\u20132011 release",
+      "classification": "Historical public data",
+      "repository": "https://github.com/satya20000/lenden",
+      "commit": "b9b162b77a65191d55a9d488d7562fc98d0be0e6",
+      "files": [
+        {
+          "path": "02_Cleaned_Data/fact_loan.csv",
+          "sha256": "cf6fa81b31635284a74334b37e21dbf09c343689fc1d4531fd82488cc1671956",
+          "url": "https://github.com/satya20000/lenden/blob/b9b162b77a65191d55a9d488d7562fc98d0be0e6/02_Cleaned_Data/fact_loan.csv"
+        }
+      ]
+    },
+    "grain": "One accepted loan"
+  },
+  {
+    "id": "saas-retention",
+    "rows": 5724,
+    "bytes": 813837,
+    "source": {
+      "label": "Analytics Engineering SaaS subscriptions v1.0.0",
+      "classification": "Synthetic educational data \u00b7 CC BY 4.0",
+      "repository": "https://github.com/satya20000/churnanalysis",
+      "commit": "c1c2ebf0acde7cbce193174d16db32cbb9090c04",
+      "files": [
+        {
+          "path": "data/processed/customer_analytics.csv",
+          "sha256": "3df874e05617363afe210c8d7ef880a39bb473775fc70a62fe4dab39e0892384",
+          "url": "https://github.com/satya20000/churnanalysis/blob/c1c2ebf0acde7cbce193174d16db32cbb9090c04/data/processed/customer_analytics.csv"
+        },
+        {
+          "path": "data/processed/subscription_monthly_snapshot.csv.gz",
+          "sha256": "a62cfefe7f85d2d633b673300a5e7eba5b4947a183a231038932122305d45506",
+          "url": "https://github.com/satya20000/churnanalysis/blob/c1c2ebf0acde7cbce193174d16db32cbb9090c04/data/processed/subscription_monthly_snapshot.csv.gz"
+        },
+        {
+          "path": "data/processed/billing_risk_accounts.csv",
+          "sha256": "52ed0cd25d021dcd9ebea11d761f71c45662295e2801345b90e0fe1e0a52bed3",
+          "url": "https://github.com/satya20000/churnanalysis/blob/c1c2ebf0acde7cbce193174d16db32cbb9090c04/data/processed/billing_risk_accounts.csv"
+        }
+      ]
+    },
+    "grain": "Month \u00d7 plan \u00d7 region \u00d7 segment \u00d7 channel; account-level cohort detail"
+  }
+]
